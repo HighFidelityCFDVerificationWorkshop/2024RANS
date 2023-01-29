@@ -1,0 +1,81 @@
+
+SET fac 0.9
+SET tnl 2.0
+SET thr 5.5
+
+BOX -2.0 -1./3. 0   0 2./3. 1
+BOX -1.0 -1./3. 0   0 2./3. 1
+BOX  tnl     -1./3. 0   0 2./3. 1
+RESTORE .
+BOX  tnl+0.1 -1./3. 0   0 2./3. 1
+BOX  thr     -1./3.+1/3*(1-fac) (1-fac)/2   0 2./3.*fac 1*fac
+BOX  thr+0.1 -1./3.+1/3*(1-fac) (1-fac)/2   0 2./3.*fac 1*fac
+RESTORE .
+BOX  6.5     -1./3.+1/3*(1-fac) (1-fac)/2   0 2./3.*fac 1*fac
+BLEND
+SET tunnel @nbody
+SELECT face
+   ATTRIBUTE PW:Name $NoSlip
+   ATTRIBUTE bc_name $4000_noslip
+   ATTRIBUTE capsMesh $NoSlip
+   ATTRIBUTE capsGroup $noslip
+   ATTRIBUTE PW:WallSpacing 0.001
+UDPRIM naca camber 0.0 thickness 0.12 sharpte 1
+STORE airfoil
+
+MARK
+  RESTORE airfoil
+  RESTORE airfoil
+  TRANSLATE 0 0 0.75
+BLEND 0 -1;1
+TRANSLATE -0.25 0 0
+ROTATEZ -10 0 0
+SELECT face
+   ATTRIBUTE PW:Name $NoSlip
+   ATTRIBUTE bc_name $4000_noslip
+   ATTRIBUTE capsMesh $NoSlip
+   ATTRIBUTE PW:WallSpacing 0.001
+   ATTRIBUTE capsGroup $noslip
+
+SUBTRACT
+
+BOX -1.0   -0.5 -0.5   0 1.5 2
+SUBTRACT
+BOX tnl    -0.5 -0.5   0 1.5 2
+SUBTRACT
+
+SELECT face -3 0 -0.5 2 -0.5 2
+   ATTRIBUTE PW:Name $Slip
+   ATTRIBUTE bc_name $3000_slip
+   ATTRIBUTE PW:WallSpacing 0.0
+   ATTRIBUTE capsGroup $slip
+   ATTRIBUTE capsMesh $slip
+SELECT face  tnl-0.1 13.5 -0.5 2 -0.5 2
+   ATTRIBUTE PW:Name $Slip
+   ATTRIBUTE bc_name $3000_slip
+   ATTRIBUTE PW:WallSpacing 0.0
+   ATTRIBUTE capsGroup $slip
+   ATTRIBUTE capsMesh $slip
+
+SELECT face tunnel 1 1
+   ATTRIBUTE PW:Name $Inflow
+   ATTRIBUTE bc_name $5000_inflow
+   ATTRIBUTE PW:WallSpacing 0.0
+   ATTRIBUTE capsGroup $inflow
+   ATTRIBUTE capsMesh $inflow
+SELECT face tunnel 2 1
+   ATTRIBUTE PW:Name $Outflow
+   ATTRIBUTE bc_name $5001_outflow
+   ATTRIBUTE PW:WallSpacing 0.0
+   ATTRIBUTE capsGroup $outflow
+   ATTRIBUTE capsMesh $outflow
+
+SELECT body
+   ATTRIBUTE capsAIM $pointwiseAIM;$aflr4AIM;$aflr3AIM
+   ATTRIBUTE capsMeshLength 1
+
+ROTATEX 90 0 0
+
+DUMP NACA0012_Wing.egads 0 1
+DUMP NACA0012_Wing.igs 0 1
+DUMP NACA0012_Wing.stp 0 1
