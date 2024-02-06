@@ -1,0 +1,1948 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"FUN3D/Pointwise_V5_Data/grid_PWV5_50_cpcfx.dat"'
+$!VarSet |LFDSVL1| = '"x" "y" "z" "cp" "cf_x"'
+$!VarSet |LFDSFN2| = '"FUN3D/HeldenMesh_Slip3_Data/grid_HM_e1_cpcfx.dat"'
+$!VarSet |LFDSVL2| = '"x" "y" "z" "cp" "cf_x"'
+$!VarSet |LFDSFN3| = '"USM3D/Grid_Convergence_Cp_Cfx/E1/NACA0012_Wing_Slip3_e1_cpcfx.dat"'
+$!VarSet |LFDSVL3| = '"x" "y" "z" "cp" "cf_x";"cfx"'
+$!VarSet |LFDSFN4| = '"METACOMP/Pointwise_V5/4.0/grid_4.0_cpcfx.dat"'
+$!VarSet |LFDSVL4| = '"x" "y" "z" "cp" "cf_x";"cfx"'
+$!VarSet |LFDSFN5| = '"METACOMP/HELDENMESHES_S3/e1/grid_e1_cpcfx.dat"'
+$!VarSet |LFDSVL5| = '"x" "y" "z" "cp" "cf_x";"cfx"'
+$!VarSet |LFDSFN6| = '"WOLF/adap_2560K/grid_adap_2560K_cfxcp_Y=-0.001.dat" "WOLF_NACA0012_in_tunnel_Data_Submission/adap_2560K/grid_adap_2560K_cfxcp_Y=-0.035.dat" "WOLF_NACA0012_in_tunnel_Data_Submission/adap_2560K/grid_adap_2560K_cfxcp_Y=-0.73.dat"'
+$!VarSet |LFDSVL6| = '"x" "y" "z" "cp" "cf_x";"cfx"'
+$!VarSet |LFDSFN7| = '"COFFE/grid_c1_cp.dat" "Holst_NACA0012_Tunnel_Data_Submission/grid_960k_cp.dat"'
+$!VarSet |LFDSVL7| = '"x" "y" "z" "cp" "cf_x";"cfx"'
+$!VarSet |LFDSFN8| = '"SANS/grid_960k_cpcfx.dat"'
+$!VarSet |LFDSVL8| = '"x" "y" "z" "cp" "cf_x";"cfx"'
+$!SetStyleBase Factory
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!SetAuxData 
+  AuxDataLocation = Layout
+  Name = 'UI.FirstPageOffset'
+  ValueString = '1'
+### Page Number 1 ###
+$!Page 
+  Name = 'Cfx'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = Yes
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1, Page Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!ReadDataSet  '|LFDSFN2|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL2|'
+$!RemoveVar |LFDSVL2|
+$!RemoveVar |LFDSFN2|
+$!ReadDataSet  '|LFDSFN3|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL3|'
+$!RemoveVar |LFDSVL3|
+$!RemoveVar |LFDSFN3|
+$!ReadDataSet  '|LFDSFN4|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL4|'
+$!RemoveVar |LFDSVL4|
+$!RemoveVar |LFDSFN4|
+$!ReadDataSet  '|LFDSFN5|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL5|'
+$!RemoveVar |LFDSVL5|
+$!RemoveVar |LFDSFN5|
+$!ReadDataSet  '|LFDSFN6|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL6|'
+$!RemoveVar |LFDSVL6|
+$!RemoveVar |LFDSFN6|
+$!ReadDataSet  '|LFDSFN7|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL7|'
+$!RemoveVar |LFDSVL7|
+$!RemoveVar |LFDSFN7|
+$!ReadDataSet  '|LFDSFN8|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL8|'
+$!RemoveVar |LFDSVL8|
+$!RemoveVar |LFDSFN8|
+$!RenameDataSetVar 
+  Var = 5
+  Name = 'cfx'
+$!RenameDataSetVar 
+  Var = 4
+  Name = 'C<sub>p</sub>'
+$!RenameDataSetVar 
+  Var = 4
+  Name = 'C<sub>p</sub>'
+$!RenameDataSetVar 
+  Var = 5
+  Name = 'C<sub>fx</sub>'
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [2,5,8,11,14,17,20,24,26]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    TextShape
+      {
+      Height = 2.5
+      }
+    Box
+      {
+      BoxType = None
+      Margin = 1
+      }
+    XYPos
+      {
+      X = 26.128
+      Y = 86.773
+      }
+    AnchorAlignment = TopLeft
+    }
+$!LineMap  [1]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [5]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [6]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [8]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [9]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [10]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [11]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [12]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 12
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [13]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [14]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 14
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [15]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 15
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [16]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 16
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom3
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [17]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 17
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom3
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [18]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 18
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom3
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [19]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 19
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom32
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [20]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 20
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom32
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [21]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 21
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom32
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [22]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 22
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom32
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [23]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 23
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom32
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [24]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 24
+    XAxisVar = 1
+    YAxisVar = 5
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom32
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [25]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 25
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Purple
+    FillMode = UseLineColor
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [26]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 26
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Curves
+    {
+    ExtendedName = 'Stineman Interpolation'
+    ExtendedSettings = 'UseIndVarRange = FALSE\nIndVarMin = -1E+150\nIndVarMax = 1E+150\n'
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Purple
+    FillMode = UseLineColor
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [27]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 27
+    XAxisVar = 1
+    YAxisVar = 5
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Purple
+    FillMode = UseLineColor
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -0.25
+    RangeMax = 0.73999999999999999112
+    GRSpacing = 0.2
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -0.0020000000000000000416
+    RangeMax = 0.010999999999999999362
+    GRSpacing = 0.002
+    Title
+      {
+      TitleMode = UseText
+      Text = 'C<sub>fx</sub>'
+      }
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!FrameControl ActivateByNumber
+  Frame = 1
+### Page Number 2 ###
+$!PageControl Create
+$!Page 
+  Name = 'Cp'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = Yes
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1, Page Number 2 ###
+$!AttachDataSet 
+  PageNum = 2
+  Frame = 1
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [3,6,9,12,15,18,21-22,27]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    TextShape
+      {
+      Height = 2.5
+      }
+    Box
+      {
+      BoxType = None
+      }
+    XYPos
+      {
+      X = 61.515
+      Y = 97.386
+      }
+    }
+$!LineMap  [1]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [5]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [6]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Purple
+    FillColor = Purple
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [8]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [9]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [10]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [11]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [12]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 12
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Purple
+    FillColor = Purple
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [13]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [14]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 14
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [15]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 15
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [16]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 16
+    XAxisVar = 1
+    YAxisVar = 4
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom3
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [17]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 17
+    XAxisVar = 1
+    YAxisVar = 4
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom3
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [18]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 18
+    XAxisVar = 1
+    YAxisVar = 4
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom3
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [19]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 19
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [20]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 20
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [21]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 21
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [22]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 22
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom1
+    FillColor = Custom1
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [23]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 23
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom3
+    FillColor = Custom3
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [24]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 24
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Purple
+    FillColor = Purple
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [25]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 25
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [26]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 26
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [27]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 27
+    XAxisVar = 1
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = DashDot
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 0.25
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -0.25
+    RangeMax = 0.73999999999999999112
+    GRSpacing = 0.2
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -2.0385740000000001082
+    RangeMax = 1.0138600778864998997
+    IsReversed = Yes
+    GRSpacing = 0.5
+    Title
+      {
+      Offset = 7
+      }
+    }
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config
