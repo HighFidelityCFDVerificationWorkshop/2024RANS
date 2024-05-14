@@ -1,0 +1,2 @@
+In all convergence history files, the variable "rms_res_mf5"
+provides the combined rms of *all five* meanflow equations.
