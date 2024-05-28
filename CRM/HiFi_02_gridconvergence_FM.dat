@@ -1,0 +1,82 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   HLPW-5 Force/Moment Grid Convergence DATA SUBMITTAL FORM Case 1, May 05, 2023
+#
+#   CASE 1 is a mesh convergence study for the HL-CRM wing-body verification case at alpha=11 deg.
+#   For RANS, this case should be run FULLY TURBULENT (no forced transition) in FREE AIR (no tunnel walls).
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 275.8 inches
+#                 FT:   Fully Turbulent
+#
+#                A-003.2:   Participant ID (assigned by HLPW committee); e.g., G-011, R-048, A-002, H-013, L-025, W-047
+#
+#    FLOW CONDITIONS:
+#             Angle of Attack: 11.0 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 5.6 million (based on MAC)
+#             Freestream Temp: 521 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "A-003.2"
+
+#                                                   <------ Optional ----->
+VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG"  "CDv" "CDp"
+
+ZONE T="A=003.1 case1 wing-body verification ALPHA=11 freeair FT"
+# Supply as many lines as grid levels run:
+30130 6.0464508e-01 2.7421476e-01 2.0749493e-01 -1 -999 -999 1.2080494e-01 1.5340982e-01
+82098 7.4970046e-01 1.6484712e-01 8.6316439e-02 -1 -999 -999 5.8089490e-02 1.0675763e-01
+86891 8.3385144e-01 1.2753067e-01 5.7281433e-02 -1 -999 -999 4.2535526e-02 8.4995144e-02
+89210 9.0332365e-01 1.0519320e-01 2.6676322e-02 -1 -999 -999 3.4280031e-02 7.0913169e-02
+91890 9.6431101e-01 9.0532601e-02 -4.3924378e-03 -1 -999 -999 2.9864154e-02 6.0668447e-02
+98274 1.0071510e+00 8.2482108e-02 -2.7355096e-02 -1 -999 -999 2.6410165e-02 5.6071943e-02
+180940 1.0434695e+00 7.5161748e-02 -4.6992008e-02 -1 -999 -999 2.1168659e-02 5.3993089e-02
+198155 1.0337298e+00 7.0443752e-02 -4.0402148e-02 -1 -999 -999 1.6824279e-02 5.3619473e-02
+203988 1.0376625e+00 6.9907597e-02 -4.1347692e-02 -1 -999 -999 1.6429117e-02 5.3478480e-02
+206434 1.0403319e+00 6.9753580e-02 -4.2081383e-02 -1 -999 -999 1.6208473e-02 5.3545107e-02
+207963 1.0407709e+00 6.9578129e-02 -4.2259146e-02 -1 -999 -999 1.6060926e-02 5.3517203e-02
+458762 1.0556703e+00 6.7010347e-02 -5.2279526e-02 -1 -999 -999 1.4569376e-02 5.2440971e-02
+487121 1.0573239e+00 6.6292973e-02 -5.3084150e-02 -1 -999 -999 1.3906366e-02 5.2386607e-02
+504760 1.0578705e+00 6.5971694e-02 -5.3196296e-02 -1 -999 -999 1.3615025e-02 5.2356669e-02
+514129 1.0574090e+00 6.5770455e-02 -5.3145932e-02 -1 -999 -999 1.3472542e-02 5.2297913e-02
+879525 1.0613429e+00 6.4764624e-02 -5.5545796e-02 -1 -999 -999 1.2906064e-02 5.1858560e-02
+932634 1.0613480e+00 6.4549749e-02 -5.4517553e-02 -1 -999 -999 1.2784602e-02 5.1765147e-02
+945948 1.0612305e+00 6.4491858e-02 -5.4230926e-02 -1 -999 -999 1.2751987e-02 5.1739871e-02
+946328 1.0613637e+00 6.4499733e-02 -5.4225987e-02 -1 -999 -999 1.2741636e-02 5.1758097e-02
+1754529 1.0647036e+00 6.3966176e-02 -5.6418475e-02 -1 -999 -999 1.2473230e-02 5.1492946e-02
+1813068 1.0644553e+00 6.3892863e-02 -5.6380533e-02 -1 -999 -999 1.2438015e-02 5.1454848e-02
+1827796 1.0648218e+00 6.3856578e-02 -5.6373001e-02 -1 -999 -999 1.2429958e-02 5.1426620e-02
+3461855 1.0671818e+00 6.3590786e-02 -5.7825934e-02 -1 -999 -999 1.2268492e-02 5.1322294e-02
+3550601 1.0671152e+00 6.3568015e-02 -5.7927633e-02 -1 -999 -999 1.2253204e-02 5.1314811e-02
+3570760 1.0670659e+00 6.3577105e-02 -5.7956389e-02 -1 -999 -999 1.2249953e-02 5.1327152e-02
+4952816 1.0678628e+00 6.3435381e-02 -5.8380486e-02 -1 -999 -999 1.2196858e-02 5.1238523e-02
+6606453 1.0684447e+00 6.3344863e-02 -5.8717811e-02 -1 -999 -999 1.2156086e-02 5.1188777e-02
+6727869 1.0684499e+00 6.3344930e-02 -5.8734927e-02 -1 -999 -999 1.2152071e-02 5.1192859e-02
+6780266 1.0683689e+00 6.3349257e-02 -5.8762338e-02 -1 -999 -999 1.2149087e-02 5.1200170e-02
+10775097 1.0688856e+00 6.3273689e-02 -5.9120443e-02 -1 -999 -999 1.2112808e-02 5.1160881e-02
+13050660 1.0691557e+00 6.3259754e-02 -5.9267585e-02 -1 -999 -999 1.2098424e-02 5.1161330e-02
+13269804 1.0693378e+00 6.3257166e-02 -5.9295708e-02 -1 -999 -999 1.2097250e-02 5.1159916e-02
+13360787 1.0692633e+00 6.3260677e-02 -5.9288161e-02 -1 -999 -999 1.2095972e-02 5.1164705e-02

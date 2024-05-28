@@ -1,0 +1,52 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   HLPW-5 Force/Moment Grid Convergence DATA SUBMITTAL FORM Case 1, May 05, 2023
+#
+#   CASE 1 is a mesh convergence study for the HL-CRM wing-body verification case at alpha=11 deg.
+#   For RANS, this case should be run FULLY TURBULENT (no forced transition) in FREE AIR (no tunnel walls).
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 275.8 inches
+#                 FT:   Fully Turbulent
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., G-011, R-048, A-002, H-013, L-025, W-047
+#
+#    FLOW CONDITIONS:
+#             Angle of Attack: 11.0 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 5.6 million (based on MAC)
+#             Freestream Temp: 521 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "R-001.1"
+
+#                                                   <------ Optional ----->
+VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+ZONE T="R-001.1 case1 wing-body verification ALPHA=11 freeair FT"
+# Supply as many lines as grid levels run:
+1057077    0.1047957E+01 0.6853502E-01   -0.3864235E-01 -999 -999 -999 0.1048423E+01  -0.4665403E-03 0.5717645E-01  0.1135857E-01
+7615068    0.1066561E+01 0.6439330E-01   -0.5719225E-01 -999 -999 -999 0.1067106E+01  -0.5445900E-03 0.5253351E-01  0.1185979E-01
+58094561   0.1069642E+01 0.6360606E-01   -0.5987841E-01 -999 -999 -999 0.1070206E+01  -0.5637737E-03 0.5157455E-01  0.1203152E-01
