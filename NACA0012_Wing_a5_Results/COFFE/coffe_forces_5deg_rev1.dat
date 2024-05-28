@@ -1,6 +1,6 @@
 Title = "COFFE Solutions for NACA0012 Wing-in-Tunnel, 5deg configuration"
 #                                                        =====
-VARIABLES = "Nnode", "Ncell", "CL", "CD", "CDp" "CDv" "CM"
+VARIABLES = "Nnode", "Ncell", "C<sub>L</sub>", "C<sub>D</sub>", "CDp" "CDv" "CM"
 ZONE T = "COFFE, MIT_SANS adapted grids, SA-neg-QCR2000-R_Crot_1.0"
 18868  98818  2.86475612e-01  3.17123287e-02  1.19087465e-02  1.18755001e-02  1.61688433e-02
 36703  197962  2.18546284e-01  2.26425715e-02  1.12682769e-02  1.13742946e-02  1.15374763e-02

@@ -1,6 +1,6 @@
 Title = "FUN3D Solutions for NACA0012 Wing-in-Tunnel, Slip3 configuration AoA=5"
 #                                                        =====
-VARIABLES = "Nnode", "Ncell", "CL", "CD", "CDp" "CDv" "CM"
+VARIABLES = "Nnode", "Ncell", "C<sub>L</sub>", "C<sub>D</sub>", "CDp" "CDv" "CM"
 ZONE T = "FUN3D, HeldenMesh, SA-neg-QCR2000-R_Crot_1.0"
 78511     274851     0.224961995    0.023835766    0.01434161     0.009494157    0.009670268
 440973    1646585    0.222019033    0.021261714    0.01117412     0.010087589    0.010386596

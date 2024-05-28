@@ -1,6 +1,6 @@
 Title = "USM3D-ME alpha 5-deg solutions for NACA0012 wing-in-Tunnel, Slip3 configuration"
 #                                                                    =====
-VARIABLES = "Nnode", "Ncell", "CL", "CD", "CDp" "CDv" "CM"
+VARIABLES = "Nnode", "Ncell", "C<sub>L</sub>", "C<sub>D</sub>", "CDp" "CDv" "CM"
 ZONE T = "USM3D-ME, MIT_SANS adapted grids, SA-neg-QCR2000-R_Crot_1.0"
  36703    197962   2.251983E-01   2.186566E-02   1.126591E-02   1.059975E-02   1.069918E-02
  74355    404403   2.234278E-01   2.157741E-02   1.094705E-02   1.063036E-02   1.090485E-02

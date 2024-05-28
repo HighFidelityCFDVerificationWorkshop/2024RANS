@@ -1,6 +1,6 @@
 Title = "CFD++ Solutions for NACA0012 Wing-in-Tunnel, Slip3 configuration, AoA=5 degrees"
 #                                                        =====
-VARIABLES = "Nnode", "N", "C<sub>L</sub>", "C<sub>D</sub>", "CDp" "CDv" "CM"
+VARIABLES = "Nnode", "Ncell", "C<sub>L</sub>", "C<sub>D</sub>", "CDp" "CDv" "CM"
 ZONE T = "CFD++, Pointwise S3 grids, SA-QCR2000-R_Crot_1.0 Distances computed to all tunnel walls"
 1709751 4217833 2.1935052e-01 2.1425993e-02 1.0519821e-02 1.0906172e-02 1.1322411e-02
 4652444 11763875 2.1979635e-01 2.1185022e-02 1.0465186e-02 1.0719836e-02 1.1275286e-02
