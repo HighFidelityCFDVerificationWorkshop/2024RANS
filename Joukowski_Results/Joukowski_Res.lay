@@ -1,9 +1,9 @@
 #!MC 1410
-$!VarSet |LFDSFN1| = '"metacomp_joukowski_submission/Ref0/grid_Ref0_iterative_convergence.dat" "metacomp_joukowski_submission/Ref1/grid_Ref1_iterative_convergence.dat" "metacomp_joukowski_submission/Ref2/grid_Ref2_iterative_convergence.dat" "metacomp_joukowski_submission/Ref3/grid_Ref3_iterative_convergence.dat" "metacomp_joukowski_submission/Ref4/grid_Ref4_iterative_convergence.dat" "metacomp_joukowski_submission/Ref5/grid_Ref5_iterative_convergence.dat" "metacomp_joukowski_submission/Ref6/grid_Ref6_iterative_convergence.dat"'
+$!VarSet |LFDSFN1| = '"CFD++/Ref0/grid_Ref0_iterative_convergence.dat" "CFD++/Ref1/grid_Ref1_iterative_convergence.dat" "CFD++/Ref2/grid_Ref2_iterative_convergence.dat" "CFD++/Ref3/grid_Ref3_iterative_convergence.dat" "CFD++/Ref4/grid_Ref4_iterative_convergence.dat" "CFD++/Ref5/grid_Ref5_iterative_convergence.dat" "CFD++/Ref6/grid_Ref6_iterative_convergence.dat"'
 $!VarSet |LFDSVL1| = '"iteration" "time_step" "energy_res" "mass_res" "x_mom_res" "y_mom_res" "z_mom_res" "nutt_res" "Cl" "Cd" "Cdv"'
-$!VarSet |LFDSFN2| = '"USM3D_Joukowski/Iterative_Convergence/L0/hist.plt" "USM3D_Joukowski/Iterative_Convergence/L1/hist.plt" "USM3D_Joukowski/Iterative_Convergence/L2/hist.plt" "USM3D_Joukowski/Iterative_Convergence/L3/hist.plt" "USM3D_Joukowski/Iterative_Convergence/L4/hist.plt" "USM3D_Joukowski/Iterative_Convergence/L5/hist.plt"'
+$!VarSet |LFDSFN2| = '"USM3D/Iterative_Convergence/L0/hist.plt" "USM3D/Iterative_Convergence/L1/hist.plt" "USM3D/Iterative_Convergence/L2/hist.plt" "USM3D/Iterative_Convergence/L3/hist.plt" "USM3D/Iterative_Convergence/L4/hist.plt" "USM3D/Iterative_Convergence/L5/hist.plt"'
 $!VarSet |LFDSVL2| = '"iteration";"iterations" "time_step" "energy_res" "mass_res";"rms_res_mf" "x_mom_res" "y_mom_res" "z_mom_res" "nutt_res" "Cl" "Cd" "Cdv"'
-$!VarSet |LFDSFN3| = '"WOLF_Submission_JOUKO/residual_JOUKO_R0.dat" "WOLF_Submission_JOUKO/residual_JOUKO_R1.dat" "WOLF_Submission_JOUKO/residual_JOUKO_R2.dat" "WOLF_Submission_JOUKO/residual_JOUKO_R3.dat" "WOLF_Submission_JOUKO/residual_JOUKO_R4.dat" "WOLF_Submission_JOUKO/residual_JOUKO_R5.dat"'
+$!VarSet |LFDSFN3| = '"WOLF/residual_JOUKO_R0.dat" "WOLF/residual_JOUKO_R1.dat" "WOLF/residual_JOUKO_R2.dat" "WOLF/residual_JOUKO_R3.dat" "WOLF/residual_JOUKO_R4.dat" "WOLF/residual_JOUKO_R5.dat"'
 $!VarSet |LFDSVL3| = '"iteration";"iterations" "time_step" "energy_res";"ResRhoE" "mass_res";"rms_res_mf";"ResRho" "x_mom_res";"ResRhoU" "y_mom_res";"ResRhoV" "z_mom_res" "nutt_res" "Cl" "Cd" "Cdv"'
 $!VarSet |LFDSFN4| = '"COFFE/q1_ref0_res.dat" "COFFE/q1_ref1_res.dat" "COFFE/q1_ref2_res.dat" "COFFE/q1_ref3_res.dat" "COFFE/q1_ref4_res.dat"'
 $!VarSet |LFDSVL4| = '"iteration";"ITERID" "time_step" "energy_res";"ResRhoE" "mass_res";"NonlinRes" "x_mom_res";"ResRhoU" "y_mom_res";"ResRhoV" "z_mom_res" "nutt_res" "Cl" "Cd" "Cdv" "ITER" "Continuity Residual"'
@@ -210,7 +210,7 @@ $!FrameName  = 'Frame 001'
 $!GlobalTime 
   SolutionTime = 0
 $!DeleteLineMaps 
-$!ActiveLineMaps  =  [20-24]
+$!ActiveLineMaps  =  [1-7]
 $!GlobalLinePlot 
   DataLabels
     {
