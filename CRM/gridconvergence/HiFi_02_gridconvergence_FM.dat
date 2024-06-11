@@ -45,7 +45,7 @@ TITLE = "A-003.2"
 #                                                   <------ Optional ----->
 VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG"  "CDv" "CDp"
 
-ZONE T="A=003.1 case1 wing-body verification ALPHA=11 freeair FT"
+ZONE T="A=003.1 CCGNS case1 wing-body verification ALPHA=11 freeair FT"
 # Supply as many lines as grid levels run:
 30130 6.0464508e-01 2.7421476e-01 2.0749493e-01 -1 -999 -999 1.2080494e-01 1.5340982e-01
 82098 7.4970046e-01 1.6484712e-01 8.6316439e-02 -1 -999 -999 5.8089490e-02 1.0675763e-01

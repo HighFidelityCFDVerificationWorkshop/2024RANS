@@ -1,0 +1,1324 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"HiFi_01.1_gridconvergence_FM.dat" "HiFi_01.2_gridconvergence_FM.dat" "HiFi_02_gridconvergence_FM.dat" "HiFi_03.1_gridconvergence_FM.dat" "HiFi_03.2_gridconvergence_FM.dat" "HiFi_04_gridconvergence_FM.dat" "HiFi_05.1_gridconvergence_FM.dat" "HiFi_05.2_gridconvergence_FM.dat" "HiFi_06_gridconvergence_FM.dat" "HiFi_07.1_gridconvergence_FM.dat" "HiFi_08_gridconvergence_FM.dat"'
+$!VarSet |LFDSVL1| = '"N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv" "Nnode" "CMy" "CDf" "CLf"'
+$!SetStyleBase Factory
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!SetAuxData 
+  AuxDataLocation = Layout
+  Name = 'UI.FirstPageOffset'
+  ValueString = '1'
+### Page Number 1 ###
+$!Page 
+  Name = 'CM'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = Yes
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1, Page Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{h=DOF<sup>-1/3</sup>}={N}**(-1/3)'
+$!RenameDataSetVar 
+  Var = 2
+  Name = 'C<sub>L</sub>'
+$!RenameDataSetVar 
+  Var = 3
+  Name = 'C<sub>D</sub>'
+$!RenameDataSetVar 
+  Var = 3
+  Name = 'C<sub>D</sub>'
+$!RenameDataSetVar 
+  Var = 4
+  Name = 'C<sub>M</sub>'
+$!RenameDataSetVar 
+  Var = 10
+  Name = 'C<sub>Dp</sub>'
+$!RenameDataSetVar 
+  Var = 11
+  Name = 'C<sub>Dv</sub>'
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-11]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Box
+      {
+      BoxType = None
+      }
+    XYPos
+      {
+      X = 60.353
+      Y = 43.874
+      }
+    }
+$!LineMap  [1]
+  Name = 'FUN3D'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'FUN3D'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Red
+    FillColor = Green
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = 'USM3D'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Green
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Custom1
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [4]
+  Name = 'USM3D'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Green
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Custom3
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [5]
+  Name = 'CFD++'
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [6]
+  Name = 'COFFE'
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom32
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom32
+    FillColor = Custom3
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [7]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom3
+    FillColor = Custom1
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [8]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [9]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [10]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [11]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 16
+    YAxisVar = 4
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Log
+    RangeMin = 0.00089999999999999997537
+    RangeMax = 0.010000000000000000208
+    GRSpacing = 0.002
+    Title
+      {
+      Offset = 5
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -0.06500000000000000222
+    RangeMax = -0.040000000000000000833
+    GRSpacing = 0.005
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!FrameControl ActivateByNumber
+  Frame = 1
+### Page Number 2 ###
+$!PageControl Create
+$!Page 
+  Name = 'CL'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = Yes
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1, Page Number 2 ###
+$!AttachDataSet 
+  PageNum = 2
+  Frame = 1
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-11]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    Box
+      {
+      BoxType = None
+      }
+    XYPos
+      {
+      X = 60.353
+      Y = 43.874
+      }
+    }
+$!LineMap  [1]
+  Name = 'FUN3D'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'FUN3D'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Green
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = 'USM3D'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Green
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Custom1
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [4]
+  Name = 'USM3D'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Green
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Custom3
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [5]
+  Name = 'CFD++'
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [6]
+  Name = 'COFFE'
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Custom32
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom32
+    FillColor = Custom3
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [7]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom3
+    FillColor = Custom1
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [8]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [9]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [10]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [11]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 16
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Log
+    RangeMin = 0.00089999999999999997537
+    RangeMax = 0.010000000000000000208
+    GRSpacing = 0.002
+    Title
+      {
+      Offset = 5
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = 1
+    RangeMax = 1.1000000000000000888
+    GRSpacing = 0.02
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!FrameControl ActivateByNumber
+  Frame = 1
+### Page Number 3 ###
+$!PageControl Create
+$!Page 
+  Name = 'CD'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = Yes
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1, Page Number 3 ###
+$!AttachDataSet 
+  PageNum = 3
+  Frame = 1
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-11]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Box
+      {
+      BoxType = None
+      }
+    XYPos
+      {
+      X = 60.353
+      Y = 43.874
+      }
+    }
+$!LineMap  [1]
+  Name = 'FUN3D'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'FUN3D'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Red
+    FillColor = Green
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = 'USM3D'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Green
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Custom1
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [4]
+  Name = 'USM3D'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Green
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Custom3
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [5]
+  Name = 'CFD++'
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Blue
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [6]
+  Name = 'COFFE'
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Custom32
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom32
+    FillColor = Custom3
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [7]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Custom3
+    FillColor = Custom1
+    Size = 1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [8]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Blue
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [9]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Purple
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [10]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Red
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [11]
+  Name = 'High-Lift Workshop'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 16
+    YAxisVar = 3
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = LongDash
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Green
+    Size = 0.5
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Log
+    RangeMin = 0.00089999999999999997537
+    RangeMax = 0.010000000000000000208
+    GRSpacing = 0.002
+    Title
+      {
+      Offset = 5
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = 0.05999999999999999778
+    RangeMax = 0.070000000000000006661
+    GRSpacing = 0.002
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

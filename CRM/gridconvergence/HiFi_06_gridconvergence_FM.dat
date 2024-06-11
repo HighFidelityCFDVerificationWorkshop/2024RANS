@@ -1,6 +1,6 @@
 Title = "CFD++ Solutions for HLPW5 CRM Case 1"
 #                                                        =====
-VARIABLES = "Nnode", "Ncell", "CL", "CD", "CDp" "CDv" "CMy"
+VARIABLES = "Nnode", "N", "CL", "CD", "CDp" "CDv" "CM"
 ZONE T = "CFD++, ANSA HRLES grids, SA-QCR2000-R_Crot_1.0"
 5878234 7026482      9.3792219e-01 8.3687731e-02 7.2271050e-02 1.1416470e-02 -5.7434954e-03
 13954750 16054267    1.0690397e+00 6.4290383e-02 5.2279588e-02 1.2010687e-02 -6.1230190e-02

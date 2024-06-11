@@ -24,7 +24,7 @@
 #                MAC:   Mean aerodynamic chord = 275.8 inches
 #                 FT:   Fully Turbulent
 #
-#                XXX:   Participant ID (assigned by HLPW committee); e.g., G-011, R-048, A-002, H-013, L-025, W-047
+#                H-005:   Participant ID (assigned by HLPW committee); e.g., G-011, R-048, A-002, H-013, L-025, W-047
 #
 #    FLOW CONDITIONS:
 #             Angle of Attack: 11.0 deg
@@ -34,25 +34,18 @@
 #
 #              NOTES: 1. All numerical data fields can be free-formatted
 #                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
-#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999"
 #                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
 #                        or run time-accurately), give mean values of CL, CD, and CM
 #
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-TITLE = "R-013"
+TITLE = "H-005"
 
 #                                                   <------ Optional ----->
 VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
 
-ZONE T="R-013 case1 wing-body verification ALPHA=11 freeair FT"
+ZONE T="H-005 COFFE case1 wing-body verification ALPHA=11 freeair FT"
 # Supply as many lines as grid levels run:
-   956174  0.9038826E+00  0.8795517E-01  0.6662743E-01  -1  -999  -999  0.9042225E+00  -0.3398818E-03  0.7705056E-01  0.1090461E-01
-  5275061  0.1016527E+01  0.6936583E-01 -0.1834573E-01  -1  -999  -999  0.1016990E+01  -0.4633759E-03  0.5794709E-01  0.1141874E-01
- 15439756  0.1049733E+01  0.6675444E-01 -0.4371259E-01  -1  -999  -999  0.1050257E+01  -0.5232323E-03  0.5503172E-01  0.1172271E-01
- 33980621  0.1062350E+01  0.6603875E-01 -0.5349416E-01  -1  -999  -999  0.1062897E+01  -0.5476850E-03  0.5416728E-01  0.1187147E-01
- 63404323  0.1068130E+01  0.6572890E-01 -0.5784021E-01  -1  -999  -999  0.1068694E+01  -0.5646047E-03  0.5378456E-01  0.1194433E-01
-106478104  0.1070497E+01  0.6537596E-01 -0.5960332E-01  -1  -999  -999  0.1071063E+01  -0.5657100E-03  0.5338410E-01  0.1199187E-01
-165366106  0.1072774E+01  0.6530919E-01 -0.6133581E-01  -1  -999  -999  0.1073347E+01  -0.5733126E-03  0.5327769E-01  0.1203150E-01
-242553500  0.1073442E+01  0.6529722E-01 -0.6131271E-01  -1  -999  -999  0.1074026E+01  -0.5830686E-03  0.5323097E-01  0.1206625E-01
-340621493  0.1074090E+01  0.6519361E-01 -0.6209792E-01  -1  -999  -999  0.1074678E+01  -0.5881918E-03  0.5311764E-01  0.1207597E-01
+ 6976948  1.04693687E+00  6.77758736E-02  -4.22890567E-02  -1  -999  -999  1.04768586E+00  -7.48987423E-04  5.27094784E-02  1.50663954E-02
+19841175  1.05904397E+00  6.48902278E-02  -5.09905310E-02  -1  -999  -999  1.05959716E+00  -5.53184449E-04  5.21326509E-02  1.27575765E-02

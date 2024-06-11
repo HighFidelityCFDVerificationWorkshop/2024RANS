@@ -7,9 +7,9 @@
 #
 #       NOMENCLATURE:
 #                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
-#                 CL:   Coefficient of lift (total)
-#                 CD:   Coefficient of drag (total)
-#                 CM:   Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
 #                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
 #                         enter -1 if run in steady-state mode (non-time-accurately)
 #             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
@@ -24,7 +24,7 @@
 #                MAC:   Mean aerodynamic chord = 275.8 inches
 #                 FT:   Fully Turbulent
 #
-#                XXX:   Participant ID (assigned by HLPW committee); e.g., G-011, R-048, A-002, H-013, L-025, W-047
+#                008:   Participant ID (assigned by HLPW committee); e.g., G-011, R-048, A-002, H-013, L-025, W-047
 #
 #    FLOW CONDITIONS:
 #             Angle of Attack: 11.0 deg
@@ -40,15 +40,15 @@
 #
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-TITLE = "R-003.2"
+TITLE = "R-008.5"
 
-#                                                   <------ Optional ----->
-VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+#                                                   
+VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" 
 
-ZONE T="R-003.2 case1 wing-body verification ALPHA=11 freeair FT"
-# Supply as many lines as grid levels run:
-11978857    1.055027E+00   6.440344E-02   -4.520323E-02   -999   -999   -999   -999   -999   -999   -999
-31164266    1.063902E+00   6.412746E-02   -5.472196E-02   -999   -999   -999   -999   -999   -999   -999
-87147190    1.066470E+00   6.342257E-02   -5.652270E-02   -999   -999   -999   -999   -999   -999   -999
-232403516   1.068142E+00   6.327087E-02   -5.802495E-02   -999   -999   -999   -999   -999   -999   -999
-415074634   1.068688E+00   6.324076E-02   -5.857800E-02   -999   -999   -999   -999   -999   -999   -999
+ZONE T="R-008.5 DRAGON case1 wing-body verification ALPHA=11 freeair FT SA-neg-R-QCR TM"
+  36089000 1.034496  0.078720   -0.022311   -999 -999 -999
+  77983000 1.063090  0.071464   -0.055884   -999 -999 -999
+ 143866000 1.068280  0.070115   -0.058540   -999 -999 -999
+ 239849000 1.069384  0.068476   -0.060074   -999 -999 -999
+# Note: solution on Mesh 13v (next line) not fully converged, with LE flow separation
+ 370546000 1.080412  0.064887   -0.223638   -999 -999 -999
