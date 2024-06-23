@@ -40,12 +40,12 @@
 #
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-TITLE = "R-001.1"
+TITLE = "R-001.2"
 
 #                                                   <------ Optional ----->
 VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
 
-ZONE T="R-001.2 FUN3D case1 wing-body verification ALPHA=11 freeair FT"
+ZONE T="R-001.2 FUN3D HM Sel case1 wing-body verification ALPHA=11 freeair FT"
 # Supply as many lines as grid levels run:
 1057077    0.1047957E+01 0.6853502E-01   -0.3864235E-01 -999 -999 -999 0.1048423E+01  -0.4665403E-03 0.5717645E-01  0.1135857E-01
 7615068    0.1066561E+01 0.6439330E-01   -0.5719225E-01 -999 -999 -999 0.1067106E+01  -0.5445900E-03 0.5253351E-01  0.1185979E-01

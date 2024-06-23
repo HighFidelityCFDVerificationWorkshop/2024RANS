@@ -45,7 +45,7 @@ TITLE = "R-003.2"
 #                                                   <------ Optional ----->
 VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
 
-ZONE T="R-003.2 USM3D case1 wing-body verification ALPHA=11 freeair FT"
+ZONE T="R-003.2 USM3D HM Sel case1 wing-body verification ALPHA=11 freeair FT"
 # Supply as many lines as grid levels run:
 11978857    1.055027E+00   6.440344E-02   -4.520323E-02   -999   -999   -999   -999   -999   -999   -999
 31164266    1.063902E+00   6.412746E-02   -5.472196E-02   -999   -999   -999   -999   -999   -999   -999

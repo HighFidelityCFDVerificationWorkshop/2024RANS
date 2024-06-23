@@ -191,6 +191,33 @@ $!AlterData  [20-24]
 $!AlterData  [20-24]
   IgnoreDivideByZero = Yes
   Equation = '{Continuity Residual}={mass_res}/{mass_res}(1) '
+$!RenameDataSetVar 
+  Var = 3
+  Name = 'energy_res'
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{ITER}={Iteration}/{Iteration}(-1) '
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{Continuity Residual}={mass_res}/{mass_res}(1) '
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{Energy Residual}={energy_res}'
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{SA Residual}={nutt_res} '
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{ITER}={Iteration}/{Iteration}(-1) '
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{Continuity Residual}={mass_res}'
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{Energy Residual}={energy_res}'
+$!AlterData 
+  IgnoreDivideByZero = Yes
+  Equation = '{SA Residual}={nutt_res} '
 $!FrameLayout 
   ShowBorder = No
   ShowHeader = No
@@ -210,7 +237,7 @@ $!FrameName  = 'Frame 001'
 $!GlobalTime 
   SolutionTime = 0
 $!DeleteLineMaps 
-$!ActiveLineMaps  =  [1-7]
+$!ActiveLineMaps  =  [20-24]
 $!GlobalLinePlot 
   DataLabels
     {
@@ -885,9 +912,9 @@ $!XYLineAxis
   YDetail 1
     {
     CoordScale = Log
-    RangeMin = 1.1385993906878281307E-14
-    RangeMax = 1.000099999999999989
-    GRSpacing = 0.2
+    RangeMin = 1.0000000000000000715E-17
+    RangeMax = 100000
+    GRSpacing = 20000
     Title
       {
       Offset = 7

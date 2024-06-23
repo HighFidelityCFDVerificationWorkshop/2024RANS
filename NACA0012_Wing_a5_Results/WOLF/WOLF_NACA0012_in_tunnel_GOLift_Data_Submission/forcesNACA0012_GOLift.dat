@@ -1,4 +1,4 @@
-VARIABLES = Nnode C<sub>D</sub>  CDp  CDf C<sub>L</sub>  Pitch 
+VARIABLES = Nnode C<sub>D</sub>  CDp  CDv C<sub>L</sub>  Pitch 
 ZONE T = "WOLF, adapt lift, SA-QCR2000-R_Crot_1.0"
 40608   2.291514e-02 1.921080e-02 3.704336e-03 1.789151e-01 9.780427e-03 
 80391   2.182213e-02 1.545495e-02 6.367179e-03 1.964299e-01 7.805353e-03 

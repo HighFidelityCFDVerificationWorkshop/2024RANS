@@ -45,7 +45,7 @@ TITLE = "R-008.5"
 #                                                   
 VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" 
 
-ZONE T="R-008.5 DRAGON case1 wing-body verification ALPHA=11 freeair FT SA-neg-R-QCR TM"
+ZONE T="R-008.5 DRAGON PW NSel case1 wing-body verification ALPHA=11 freeair FT SA-neg-R-QCR TM"
   36089000 1.034496  0.078720   -0.022311   -999 -999 -999
   77983000 1.063090  0.071464   -0.055884   -999 -999 -999
  143866000 1.068280  0.070115   -0.058540   -999 -999 -999

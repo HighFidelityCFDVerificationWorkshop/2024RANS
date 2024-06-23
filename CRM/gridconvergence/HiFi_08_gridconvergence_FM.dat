@@ -45,7 +45,7 @@ TITLE = "H-005"
 #                                                   <------ Optional ----->
 VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
 
-ZONE T="H-005 COFFE case1 wing-body verification ALPHA=11 freeair FT"
+ZONE T="H-005 COFFE Adapt case1 wing-body verification ALPHA=11 freeair FT"
 # Supply as many lines as grid levels run:
  6976948  1.04693687E+00  6.77758736E-02  -4.22890567E-02  -1  -999  -999  1.04768586E+00  -7.48987423E-04  5.27094784E-02  1.50663954E-02
 19841175  1.05904397E+00  6.48902278E-02  -5.09905310E-02  -1  -999  -999  1.05959716E+00  -5.53184449E-04  5.21326509E-02  1.27575765E-02
